@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <link rel="shortcut icon" href="karnaugh.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>K-Map Generator</title>
+</head>
+
+<header style="text-align: center;">
+    <h1>Karnaugh Map Generator</h1>
+</header>
+
+<body>
+    <br /><p><h4><center>***HELLO I AM MAHENDRA SINGH***</center></h4>
+        <h5><center>***THIS IS MY KARNAUGH MAP***</center></h5></p>
+    
+<script src="KMapGenerator.js"></script>
+
+<form id="KMapMaker">
+	<div id="KMapDiv">
+        <script>
+            document.write(generateKMapHTML());
+        </script>
+	</div>
+
+    <div id="SolutionDiv">
+        <script>
+            document.write(generateSolutionHTML());
+        </script>
+	</div>
+
+    <br /><p><center>
+    <input id="resetButton" type="button" name="resetButton" value="Reset K-Map" onClick="resetKMap();">
+    &emsp; Allow "don't care" symbols
+    <input type="checkbox" name="dontCare" onClick="switchDontCare();">
+    </center></p>
+
+    <p><center>Number of logic variables you want to input-----> :
+    <input type="radio" name="numVar" onClick="changeNumVar(2);" id="Var2"> 2
+    <input type="radio" name="numVar" onClick="changeNumVar(3);" id="Var3"> 3
+    <input type="radio" name="numVar" onClick="changeNumVar(4);" id="Var4" checked> 4
+	</center></p>
+
+
+    
+</form>
+<div class="animated-background" id="d2"></div>
+
+</body>
+
+</html>
